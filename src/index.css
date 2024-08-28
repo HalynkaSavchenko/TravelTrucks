@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 :root {
   --main-background-color: #FFFFFF;
@@ -15,12 +16,11 @@
 
 body {
   background-color: var(--main-background-color);
-  color: var(--text-color);
-  font-family: "Poppins", sans-serif;
+  color: var(--main-color);
+  font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 129%;
-  letter-spacing: -0.01em;
+  font-size: 16px;
+  line-height: 1.5;
 }
 h1,
 h2,
@@ -80,8 +80,8 @@ img {
 
 .container {
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
+  /* padding-left: 16px;
+  padding-right: 16px; */
   margin-right: auto;
   margin-left: auto;
 }
@@ -95,8 +95,8 @@ img {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
+    /* padding-left: 32px;
+    padding-right: 32px; */
   }
 }
 
