@@ -1,14 +1,13 @@
 import Panel from '../../components/Panel/Panel';
-import LoadMoreBtn from '../../components/Button/Button';
 import Loader from "../../components/Loader/Loader";
 import CampersGallery from "../../components/CampersGallery/CampersGallery";
+import css from './Catalog.module.css'
 
 export default function Catalog () {
     return (
-        <div>
+        <div className={css.catalog}>
             <Panel/>
             <CampersGallery/>
-            <LoadMoreBtn/>
             <Loader/>
         </div>
     )

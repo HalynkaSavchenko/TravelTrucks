@@ -1,31 +1,49 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  location: '',
-  form: '',
-  AC: false,
-  bathroom: false,
-  kitchen: false,
-  TV: false,
-  radio: false
-};
-
-const filterSlice = createSlice({
+const filtersSlice = createSlice({
   name: 'filters',
-  initialState,
+  initialState: {
+    location: '',
+    form: '',
+    AC: false,
+    bathroom: false,
+    kitchen: false,
+    TV: false,
+    radio: false,
+  },
   reducers: {
-    setFilter(state, action) {
-      return {
-        ...state,
-        ...action.payload,
-      };
+    setLocation(state, action) {
+      state.location = action.payload;
     },
-    resetFilters(state) {
-      return initialState;
+    setForm(state, action) {
+      state.form = action.payload;
+    },
+    toggleAC(state) {
+      state.AC = !state.AC;
+    },
+    toggleBathroom(state) {
+      state.bathroom = !state.bathroom;
+    },
+    toggleKitchen(state) {
+      state.kitchen = !state.kitchen;
+    },
+    toggleTV(state) {
+      state.TV = !state.TV;
+    },
+    toggleRadio(state) {
+      state.radio = !state.radio;
     },
   },
 });
 
-export const { setFilter, resetFilters } = filterSlice.actions;
+export const {
+  setLocation,
+  setForm,
+  toggleAC,
+  toggleBathroom,
+  toggleKitchen,
+  toggleTV,
+  toggleRadio,
+} = filtersSlice.actions;
 
-export default filterSlice.reducer;
+export default filtersSlice.reducer;

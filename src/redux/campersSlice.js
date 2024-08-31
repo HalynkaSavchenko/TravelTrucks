@@ -5,9 +5,8 @@ const campersSlice = createSlice({
   name: 'campers',
   initialState: {
     items: [],
-    status: 'idle',
-    error: null,
-    favorites: [],
+    isLoading: false,
+    isError: false,
   },
   reducers: {
     addToFavorites(state, action) {
