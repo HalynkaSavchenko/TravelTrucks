@@ -1,15 +1,10 @@
 .link {
-    display: inline-flex;
-    padding: 8px;
-    border: 1px solid rgb(150, 114, 213);;
-    border-radius: 16px;
+    width: 46px;
+    height: 24px;
 }
 
 .active {
-    color: rgb(150, 114, 213);
-    border: 1px solid rgb(150, 114, 213);;
-    border-radius: 16px;
-   background-color: rgb(39, 33, 44);
+    color: var(--button-hover-color);
 }
 
 .nav {

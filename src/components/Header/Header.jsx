@@ -4,8 +4,8 @@ import Navigation from '../Navigation/Navigation';
 
 export default function Header() {
     return (
-        <div className={css.logo}>
-            <Link  to="/">TravelTrucs</Link>
+        <div className={css.header}>
+            <Link className={css.logo} to="/">TravelTrucs</Link>
             <Navigation/>
         </div>
     )

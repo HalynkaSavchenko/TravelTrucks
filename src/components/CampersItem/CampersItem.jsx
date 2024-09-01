@@ -1,4 +1,5 @@
-
+import {  NavLink } from 'react-router-dom';
+import Button from '../Button/Button';
 import css from './CampersItem.module.css';
 
 export default function CampersItem ({ camper }) {
@@ -10,6 +11,10 @@ export default function CampersItem ({ camper }) {
       <p className={css.rating}>Rating: {camper.rating}</p>
       <p className={css.location}>Location: {camper.location}</p>
       <p className={css.description}>{camper.description}</p>
+      <NavLink to='camper'>
+        <Button text="Show more"/>
+      </NavLink>
+    
     </div>
   );
 };

@@ -1,4 +1,13 @@
-.logo {
+.header {
     display: flex;
     flex-direction: row;
+    gap:450px;
+    width: 1440px;
+    height: 72px;
+    border-bottom: 1px solid var(--badges-color);
+    background-color: var(--inputs-color);
+}
+
+.logo {
+    font-size: 36px;
 }
