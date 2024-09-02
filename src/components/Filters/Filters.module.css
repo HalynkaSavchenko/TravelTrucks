@@ -1,0 +1,40 @@
+.form {
+    width: 360px;
+}
+
+.fieldset {
+    border: none;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.checkbox,
+.radio {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 112px;
+    height: 96px;
+    border: 1px solid var(--gray-light-color);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+}
+
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
+  display: none;
+}
+
+.checkbox input[type="checkbox"]:checked + svg,
+.radio input[type="radio"]:checked + svg {
+  fill: var(--button-color); /* Колір іконки при виборі */
+}
