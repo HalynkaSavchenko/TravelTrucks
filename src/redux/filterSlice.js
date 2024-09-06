@@ -5,11 +5,19 @@ const filtersSlice = createSlice({
   initialState: {
     location: '',
     form: '',
-    AC: false,
-    bathroom: false,
-    kitchen: false,
-    TV: false,
-    radio: false,
+    equipment: {
+      automatic: false,
+      petrol: false,
+      ac: false,
+      bathroom: false,
+      kitchen: false,
+      tv: false,
+      radio: false,
+      refrigerator: false,
+      microwave: false,
+      gas: false,
+      water: false,
+    },
   },
   reducers: {
     setLocation(state, action) {
@@ -18,20 +26,25 @@ const filtersSlice = createSlice({
     setForm(state, action) {
       state.form = action.payload;
     },
-    toggleAC(state) {
-      state.AC = !state.AC;
+    setEquipment(state, action) {
+      state.equipment = action.payload;
     },
-    toggleBathroom(state) {
-      state.bathroom = !state.bathroom;
-    },
-    toggleKitchen(state) {
-      state.kitchen = !state.kitchen;
-    },
-    toggleTV(state) {
-      state.TV = !state.TV;
-    },
-    toggleRadio(state) {
-      state.radio = !state.radio;
+    clearFilters(state) {
+      state.location = "";
+      state.form = "";
+      state.equipment = {
+        automatic: false,
+        petrol: false,
+        ac: false,
+        bathroom: false,
+        kitchen: false,
+        tv: false,
+        radio: false,
+        refrigerator: false,
+        microwave: false,
+        gas: false,
+        water: false,
+      };
     },
   },
 });
@@ -39,11 +52,8 @@ const filtersSlice = createSlice({
 export const {
   setLocation,
   setForm,
-  toggleAC,
-  toggleBathroom,
-  toggleKitchen,
-  toggleTV,
-  toggleRadio,
+  setEquipment,
+  clearFilters,
 } = filtersSlice.actions;
 
 export default filtersSlice.reducer;
