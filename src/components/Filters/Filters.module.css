@@ -38,3 +38,30 @@
 .radio input[type="radio"]:checked + svg {
   fill: var(--button-color); /* Колір іконки при виборі */
 }
+
+.container {
+  position: relative;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.locationIcon {
+  position: absolute;
+  left: 10px; 
+  pointer-events: none; 
+}
+
+.input {
+  width: 360px;
+  height: 56px;
+  padding-left: 30px; 
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+}

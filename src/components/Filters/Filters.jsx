@@ -1,11 +1,3 @@
-// import { useDispatch, useSelector } from 'react-redux';
-// import {
-//   toggleAC,
-//   toggleBathroom,
-//   toggleKitchen,
-//   toggleTV,
-// } from '../../redux/filterSlice'
-// import { selectACFilter, selectBathroomFilter, selectKitchenFilter, selectTVFilter} from '../../redux/selectors';
 import SvgIcon from '../../img/sprite';
 import css from './Filters.module.css';
 import Button from '../Button/Button';
@@ -13,7 +5,25 @@ import Button from '../Button/Button';
 export default function Filters() {
    return (
     <form action="" className={css.form}>
-      
+      <label htmlFor="search" className={css.label}>
+          Location
+          <div className={css.inputWrapper}>
+            <SvgIcon
+              className={css.locationIcon}
+              iconName="map" 
+              width="16" 
+              height="16"
+            />
+            <input
+              className={css.input}
+              type="text"
+              autoComplete="off"
+              autoFocus
+              name="search"
+              placeholder="Kyiv, Ukraine"
+            />
+          </div>
+        </label>
       <fieldset className={css.fieldset}>
         <legend>Vehicle equipment</legend>
         <label className={css.checkbox}>

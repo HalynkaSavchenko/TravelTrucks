@@ -13,12 +13,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <App />
           </Suspense>
         </BrowserRouter>
-      </PersistGate>
-      
+      </PersistGate>  
     </Provider>
     
   </React.StrictMode>,
